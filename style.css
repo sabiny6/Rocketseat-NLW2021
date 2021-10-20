@@ -1,0 +1,26 @@
+/* CSS: Cascating Stylesheet */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid; /*maneira de visualização dos elementos*/
+  place-items: center; /*quero colocar esses itens centralizados*/
+}
+
+main {
+  background: url(images/Mobile.png);
+  width: 375px;
+  height: 812px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: rgb(37, 39, 41);
+}
+
+a {
+  color: lightgray;
+  text-decoration: none;
+}
