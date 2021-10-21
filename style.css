@@ -1,7 +1,15 @@
 /* CSS: Cascating Stylesheet */
+* {
+  margin: 0;
+}
+
 html,
 body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%);
   height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
@@ -15,12 +23,70 @@ main {
   height: 812px;
 }
 
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  /*margin: 0 0 0 0; --> "top right bottom left"*/
+  /*margin: 0 0 0; --> "top right+left bottom*/
+  /*margin: 0 0; --> "top+bottom right+left"*/
+  position: relative;
+  /*aqui 'position: relative' quer dizer que '.avatar' é o detentor do limite para o '.avatar span' que está a -15 px de diferença de altura dele, sendo ele 'position: absolute'*/
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+.avatar > img {
+  /*sinal de maior se refere à pegar a imagem do primeiro nível de 'avatar'*/
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*ajusta a proporção de tamanho da imagem original*/
+
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
 h1 {
   font-size: 1.5rem;
-  color: rgb(37, 39, 41);
+
+  margin-top: 1.5rem;
 }
 
 a {
-  color: lightgray;
+  color: var(--grey);
   text-decoration: none;
+
+  margin-top: 0.25rem;
+
+  display: flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex; /*trabalha em tornar os elementos em lista alinhados enfileiradamente no eixo X (horizontal)*/
+  gap: 0.5rem; /*'gap' coloca espaços entre cada elemento enfileirado*/
+  justify-content: center;
 }

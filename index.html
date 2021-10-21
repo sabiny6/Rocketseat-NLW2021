@@ -16,16 +16,25 @@
 <html>
   <head>
     <title>Sabiny Vallentinne - DoWhile 2021</title>
-    <meta charset="utf-8" />
 
     <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <main>
-      <div class="content">
+      <div class="container">
         <div class="avatar">
-          <img src="images/build.svg" alt="Selo Rocketseat" />
+          <span>
+            <img src="images/build.svg" alt="Selo Rocketseat" />
+          </span>
           <img
             src="https://lorempixel.com/185/185/people/"
             alt="Foto pessoal"
@@ -33,41 +42,58 @@
           <!--src: local da imagem; alt: texto alternativo se a imagem não for encontrada-->
         </div>
 
-        <h1>Sabiny Vallentinne</h1>
-        <a href="https://instagram.com/sabiny_arts">
+        <h1 id="userName">Mayk Brito</h1>
+        <a href="https://github.com/maykbrito" target="_blank">
           <img src="images/github 2.svg" alt="ícone github" />
           sabiny6</a
         >
 
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-          <li>
-            <a href="https://instagram.com/sabiny_arts">
-              <img
-                src="images/instagram.svg"
-                alt="ícone instagram"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="instagram">
+            <a href="https://instagram.com/maykbrito" target="_blank">
+              <img src="images/instagram.svg" alt="ícone instagram" />
             </a>
           </li>
 
-          <li>
-            <a href="https://twitter.com/sabiny">
-              <img
-                src="images/twitter.svg"
-                alt="ícone twitter"
-                target="_blank"
-              />
+          <li class="twitter">
+            <a href="https://twitter.com/maykbrito" target="_blank">
+              <img src="images/twitter.svg" alt="ícone twitter" />
             </a>
           </li>
         </ul>
       </div>
     </main>
+
+    <script>
+      // variaveis: let (variavel ser mudada depois) ou const (variavel permanecer constante)
+      const LinkSocialMedia = {
+        github: 'sabiny6',
+        instagram: 'sabiny_arts',
+        twitter: 'sabiny'
+      }
+
+      function changeSocialMediaLinks() {
+        //document.getElementById('userName').textContent = "Sabiny Vallentinne"
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>
 
 <!-- 
-  DESAFIO 
+  DESAFIO 1
   Senha: #RumoAoPróximoNível
+
+  DESAFIO 2
+  Senha: #Protagonistas
 -->
