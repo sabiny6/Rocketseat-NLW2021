@@ -30,6 +30,12 @@ span {
   font-size: 0.9rem;
 }
 
+.animated-word:hover {
+  color: rgba(218, 209, 180, 0.7);
+  outline-color: rgba(71, 126, 232, 0);
+  outline-offset: 300px;
+}
+
 /* 
     100vw --> 100 viewport width
     100vh --> 100 viewport height
