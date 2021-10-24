@@ -38,17 +38,24 @@
           <img
             src="https://lorempixel.com/185/185/people/"
             alt="Foto pessoal"
+            id="userImage"
           />
           <!--src: local da imagem; alt: texto alternativo se a imagem não for encontrada-->
         </div>
 
         <h1 id="userName">Mayk Brito</h1>
-        <a href="https://github.com/maykbrito" target="_blank">
+        <a id="userLink" href="https://github.com/maykbrito" target="_blank">
           <img src="images/github 2.svg" alt="ícone github" />
-          sabiny6</a
-        >
+          <span id="icon">maykbrito</span>
+        </a>
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <!--
+          a tag '<span></span>' é usada para escrever um texto que vai ficar na mesma linha, sem ser um parágrafo
+        -->
+
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="instagram">
@@ -66,29 +73,13 @@
       </div>
     </main>
 
-    <script>
-      // variaveis: let (variavel ser mudada depois) ou const (variavel permanecer constante)
-      const LinkSocialMedia = {
-        github: 'sabiny6',
-        instagram: 'sabiny_arts',
-        twitter: 'sabiny'
-      }
-
-      function changeSocialMediaLinks() {
-        //document.getElementById('userName').textContent = "Sabiny Vallentinne"
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
+
+<!-- 
+  DOM -> 'Document Object Model'
+-->
 
 <!-- 
   DESAFIO 1
@@ -96,4 +87,7 @@
 
   DESAFIO 2
   Senha: #Protagonistas
+
+  DESAFIO 3
+  Senha: #ImaginarConstruirTransformar
 -->
